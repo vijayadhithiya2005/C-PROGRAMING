@@ -1,0 +1,18 @@
+Math Functions
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float num;
+    int squareValue, base, power;
+    scanf("%f", &num);
+    scanf("%d", &squareValue); 
+    scanf("%d", &base);        
+    scanf("%d", &power);       
+    printf("%d\n", (int)floor(num));  
+    printf("%d\n", (int)ceil(num));   
+    printf("%d\n", (int)sqrt(squareValue));  
+    printf("%d\n", (int)pow(base, power));  
+    
+    return 0;
+}
