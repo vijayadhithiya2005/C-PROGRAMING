@@ -1,0 +1,28 @@
+abudant number
+  #include <stdio.h>
+
+int sumOfDivisors(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n / 2; i++) {
+        if (n % i == 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+void checkAbundantNumber(int n) {
+    int sum = sumOfDivisors(n);
+    if (sum > n) {
+        printf("Abundant Number\n");
+    } else {
+        printf("Not Abundant Number\n");
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    checkAbundantNumber(n);
+    return 0;
+}
