@@ -1,0 +1,15 @@
+alice in the wonder land
+#include <stdio.h>
+
+int main() {
+    int number, digit1, digit2, sum;
+    scanf("%d", &number);
+    digit1 = number / 10;
+    digit2 = number % 10;   
+    sum = digit1 + digit2;
+    printf("Bird said:%d\n", number);
+    printf("Alice must go in path-%d\n", sum);
+
+    return 0;
+}
+
