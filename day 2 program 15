@@ -1,0 +1,18 @@
+convert number to string
+#include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    if (num < 0 || num > 9) {
+        printf("Invalid Input");
+        return 0;
+    }
+
+    char *numbers[] = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
+
+    printf("Integer is %d and String is %s", num, numbers[num]);
+
+    return 0;
+}
