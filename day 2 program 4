@@ -1,0 +1,18 @@
+eligible for placement
+#include <stdio.h>
+
+int main() {
+    char name[50];
+    int arrears;
+    float cgpa;
+    scanf("%s %d %f", name, &arrears, &cgpa);
+    printf("Name of the Student:%s\n", name);
+    if ((arrears == 1 && cgpa > 7.0) || (arrears < 2 && cgpa > 7.5)) {
+        printf("%s is Eligible for Placement\n", name);
+    } else {
+        printf("%s is Not Eligible for Placement\n", name);
+    }
+
+    return 0;
+}
+
