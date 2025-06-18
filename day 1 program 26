@@ -1,0 +1,25 @@
+shape claculation perimeter
+#include <stdio.h>
+#include <math.h>
+
+#define PI 3.14159265358979323846
+
+int main() {
+    int side, length, width, base1, side2, base2;
+    float radius, perimeter;
+    scanf("%d", &side);
+    perimeter = 4 * side;
+    printf("Perimeter of Square:%.2f\n", perimeter);
+    scanf("%d %d", &length, &width);
+    perimeter = 2 * (length + width);
+    printf("Perimeter of Rectangle:%.2f\n", perimeter);
+    scanf("%f", &radius);
+    perimeter = 2 * PI * radius;
+    printf("Perimeter of Circle:%.2f\n", perimeter);
+    scanf("%d %d %d", &base1, &side2, &base2);
+    perimeter = base1 + side2 + base2;
+    printf("Perimeter of Triangle:%.2f\n", perimeter);
+
+    return 0;
+}
+
