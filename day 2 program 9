@@ -1,0 +1,17 @@
+vowels or consonants
+#include <stdio.h>
+int main() {
+    char ch;
+    scanf("%c", &ch);
+    if (ch >= 'a' && ch <= 'z') {
+        ch = ch - 32;  
+    }
+    if (ch == 'A' || ch == 'e' || ch == 'I' || ch == 'O' || ch == 'U') {
+        printf("The Character %c is Vowel", ch);
+    } else if (ch >= 'A' && ch <= 'Z') {
+        printf("The Character %c is Consonant", ch);
+    } else {
+        printf("Invalid Input");
+    }
+    return 0;
+}
