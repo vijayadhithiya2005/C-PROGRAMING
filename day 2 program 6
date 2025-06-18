@@ -1,0 +1,16 @@
+greatest of 3 numbers
+#include <stdio.h>
+
+int main() {
+    float num1, num2, num3;
+    scanf("%f %f %f", &num1, &num2, &num3);
+    if (num1 >= num2 && num1 >= num3)
+        printf("Number3 is maximum with value of %.1f\n", num1);
+    else if (num2 >= num1 && num2 >= num3)
+        printf("Number3 is maximum with value of %.1f\n", num2);
+    else
+        printf("Number3 is maximum with value of %.1f\n", num3);
+
+    return 0;
+}
+
