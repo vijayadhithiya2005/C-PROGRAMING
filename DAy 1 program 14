@@ -1,0 +1,15 @@
+CRICKET STADIUM
+#include <stdio.h>
+
+int main() {
+    int length, breadth;
+    int perimeter, area;
+    scanf("%d", &length);
+    scanf("%d", &breadth);
+    perimeter = 2 * (length + breadth);
+    area = length * breadth;
+    printf("%d\n", perimeter);
+    printf("%d\n", area);
+
+    return 0;
+}
