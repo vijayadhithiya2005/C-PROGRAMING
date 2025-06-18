@@ -1,0 +1,26 @@
+friendly pair
+#include <stdio.h>
+int sumOfDivisors(int num) {
+    int sum = 0;
+    for (int i = 1; i <= num / 2; i++) {
+        if (num % i == 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+int main() {
+    int num1, num2;
+    scanf("%d %d", &num1, &num2);
+    int sum1 = sumOfDivisors(num1);
+    int sum2 = sumOfDivisors(num2);
+    float abIndex1 = (float)sum1 / num1;
+    float abIndex2 = (float)sum2 / num2;
+    if (abIndex1 == abIndex2) {
+        printf("Friendly Pair\n");
+    } else {
+        printf("Not Friendly Pair\n");
+    }
+
+    return 0;
+}
