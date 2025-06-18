@@ -1,0 +1,15 @@
+gardening
+#include <stdio.h>
+
+int main() {
+    int rows, columns, tree_number;
+    scanf("%d %d %d", &rows, &columns, &tree_number);
+    int column = (tree_number - 1) % columns;
+    if (column == 1 || column == columns - 3) {
+        printf("It is a mango tree\n");
+    } else {
+        printf("It is not a mango tree\n");
+    }
+
+    return 0;
+}
