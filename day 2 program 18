@@ -1,0 +1,30 @@
+account balance 
+  #include <stdio.h>
+int main() {
+    float balance;
+    int process;
+    float amount;
+    scanf("%f", &balance);
+    scanf("%d", &process);
+    switch (process) {
+        case 1:
+            scanf("%f", &amount);
+            balance += amount;
+            printf("%.f\n", balance);
+            break;
+        case 2:
+            scanf("%f", &amount);
+            if (amount > balance) {
+                printf("Insufficient Balance\n");
+            } else {
+                balance -= amount;
+                printf("%.f\n", balance);
+            }
+            break;
+
+        default: 
+            printf("Invalid Input\n");
+    }
+
+    return 0;
+}
