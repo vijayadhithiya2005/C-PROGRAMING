@@ -1,0 +1,16 @@
+placing the flag post 
+#include <stdio.h>
+
+int main() {
+    int x1, y1, l;
+    int x2, y2;
+    scanf("%d %d %d", &x1, &y1, &l);
+    x2 = x1 + l / 2;
+    y2 = y1 + l / 2;
+    printf("x-coordinate:%d\n", x1);
+    printf("y-coordinate:%d\n", y1);
+    printf("Length:%d\n", l);
+    printf("Centre of the ground is at (%d,%d)\n", x2, y2);
+
+    return 0;
+}
