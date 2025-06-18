@@ -1,0 +1,9 @@
+Execute the word with a Statement.
+#include<stdio.h>
+int main()
+{
+    char a[50];
+    scanf("%s",a);
+    printf("May I know how to learn %s!!!...",a);
+    return 0;
+}
