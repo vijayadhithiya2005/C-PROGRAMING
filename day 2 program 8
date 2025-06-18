@@ -1,0 +1,19 @@
+wall painting
+#include <stdio.h>
+int main() {
+    int wallLength, wallBreadth;
+    int painting1Length, painting1Breadth;
+    int painting2Length, painting2Breadth;
+    scanf("%d %d", &wallLength, &wallBreadth);
+    scanf("%d %d", &painting1Length, &painting1Breadth);
+    scanf("%d %d", &painting2Length, &painting2Breadth);
+    if ((painting1Length + painting2Length <= wallLength && painting1Breadth <= wallBreadth && painting2Breadth <= wallBreadth) ||
+        (painting1Breadth + painting2Breadth <= wallBreadth && painting1Length <= wallLength && painting2Length <= wallLength) ||
+        (painting1Length + painting2Breadth <= wallLength && painting1Breadth <= wallBreadth && painting2Length <= wallLength) ||
+        (painting1Breadth + painting2Length <= wallBreadth && painting1Length <= wallLength && painting2Breadth <= wallBreadth)) {
+        printf("Raj can fix both painting\n");
+    } else {
+        printf("Raj cannot fix both painting\n");
+    }
+    return 0;
+}
