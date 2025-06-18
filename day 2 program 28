@@ -1,0 +1,18 @@
+green lights
+  #include <stdio.h>
+
+int main() {
+    float speed, distance, time;
+    scanf("%f", &speed);
+    scanf("%f", &distance);
+    scanf("%f", &time);
+    float speedInMps = speed / 3600.0;
+    float timeToReach = distance / speedInMps;
+    if (timeToReach < time)
+        printf("Yes\n");
+    else
+        printf("No\n");
+
+    return 0;
+}
+
