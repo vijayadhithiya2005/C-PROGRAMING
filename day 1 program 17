@@ -1,0 +1,18 @@
+dept repay
+#include<stdio.h>
+int main()
+{
+    int p,r,t;
+    scanf("%d",&p);
+    scanf("%d",&r);
+    scanf("%d",&t);
+    float SI=(p*r*t)/100;
+    float amount=(p+SI);
+    float discount=(SI*2)/100;
+    float statement=(amount-discount);
+    printf("%.2f\n",SI);
+    printf("%.2f\n",amount);
+    printf("%.2f\n",discount);
+    printf("%.2f\n",statement);
+    return 0;
+}
