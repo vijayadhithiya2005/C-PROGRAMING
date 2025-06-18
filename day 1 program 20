@@ -1,0 +1,16 @@
+3 idiots 
+#include <stdio.h>
+
+int main() {
+    int x1, y1, x2, y2;
+    float midX, midY;
+    scanf("%d", &x1);
+    scanf("%d", &y1);
+    scanf("%d", &x2);
+    scanf("%d", &y2);
+    midX = (x1 + x2) / 2.0;
+    midY = (y1 + y2) / 2.0;
+    printf("Binoy's house is located at (%.1f,%.1f)\n", midX, midY);
+
+    return 0;
+}
