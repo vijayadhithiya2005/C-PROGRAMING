@@ -1,0 +1,18 @@
+calculating gain
+  #include <stdio.h>
+
+int main() {
+    float costPrice, repairCharges, sellingPrice, totalCost, gainPercentage;
+    scanf("%f", &costPrice);
+    scanf("%f", &repairCharges);
+    scanf("%f", &sellingPrice);
+    totalCost = costPrice + repairCharges;
+    if (sellingPrice > totalCost) {
+        gainPercentage = ((sellingPrice - totalCost) / totalCost) * 100;
+        printf("%.2f\n", gainPercentage);
+    } else {
+        printf("No Profit\n");
+    }
+
+    return 0;
+}
