@@ -1,0 +1,11 @@
+ASCII CALCULATION
+#include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+    printf("%c\n", (char)num);  
+    
+    return 0;
+}
+
