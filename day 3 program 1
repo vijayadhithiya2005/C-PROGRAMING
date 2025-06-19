@@ -1,0 +1,39 @@
+same or not 
+#include <stdio.h>
+
+void array_type(int arr[], int n) {
+    int even_count = 0, odd_count = 0;
+    
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            even_count++;
+        } else {
+            odd_count++;
+        }
+    }
+    
+    if (even_count == n) {
+        printf("Even\n");
+    } else if (odd_count == n) {
+        printf("Odd\n");
+    } else {
+        printf("Mixed\n");
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    array_type(arr, n);
+    
+    return 0;
+}
+    
+    return 0;
+}
