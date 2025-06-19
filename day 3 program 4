@@ -1,0 +1,25 @@
+array mean
+  #include <stdio.h>
+
+double calculate_mean(int arr[], int n) {
+    double sum = 0.0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+    return sum / n;
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    double mean = calculate_mean(arr, n);
+    printf("Array Mean Value is %.2f\n", mean);
+    
+    return 0;
+}
