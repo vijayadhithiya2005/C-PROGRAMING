@@ -1,0 +1,44 @@
+perfect square
+  #include <stdio.h>
+#include <math.h>
+
+int is_perfect_square(int n) {
+    int root = sqrt(n);
+    return root * root == n;
+}
+
+void find_perfect_squares(int arr[], int n) {
+    int perfect_squares[n];
+    int count = 0;
+    int total_sum = 0;
+    
+    for (int i = 0; i < n; i++) {
+        if (is_perfect_square(arr[i])) {
+            perfect_squares[count++] = arr[i];
+            total_sum += arr[i];
+        }
+    }
+    
+    printf("The Perfect Square Values are ");
+    for (int i = 0; i < count; i++) {
+        printf("%d ", perfect_squares[i]);
+    }
+    printf("\n");
+    
+    printf("The Number of Perfect Squares are %d\n", count);
+    printf("The Sum of Perfect Square is %d\n", total_sum);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    
+    find_perfect_squares(arr, n);
+    
+    return 0;
+}
