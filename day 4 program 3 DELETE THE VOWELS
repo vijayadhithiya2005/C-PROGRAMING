@@ -1,0 +1,29 @@
+DELETE THE VOWELS
+#include <stdio.h>
+#include <string.h>
+int isVowel(char c) {
+    switch (c) {
+        case 'a': case 'A':
+        case 'e': case 'E':
+        case 'i': case 'I':
+        case 'o': case 'O':
+        case 'u': case 'U':
+            return 1;
+        default:
+            return 0;
+    }
+}
+int main() {
+    char s[1000];
+    scanf(" %[^\n]", s);
+    int i, j = 0;
+    int len = strlen(s);
+    for (i = 0; i < len; i++) {
+        if (!isVowel(s[i])) {
+            s[j++] = s[i];
+        }
+    }
+    s[j] = '\0';
+    printf("%s\n", s);
+    return 0;
+}
