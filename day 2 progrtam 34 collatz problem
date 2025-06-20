@@ -1,6 +1,5 @@
 collatz problem
 #include <stdio.h>
-
 void collatzSequence(int n) {
     int count = 0;
     printf("Enter a number\n");
@@ -16,7 +15,6 @@ void collatzSequence(int n) {
     }
     printf("count:%d\n",count);
 }
-
 int main() {
     int n;
     scanf("%d",&n);
