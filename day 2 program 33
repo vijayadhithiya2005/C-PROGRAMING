@@ -1,6 +1,5 @@
 weekday name for number
 #include <stdio.h>
-
 void printWeekday(int day) {
     switch (day) {
         case 1:
@@ -29,7 +28,6 @@ void printWeekday(int day) {
             break;
     }
 }
-
 int main() {
     int day;
     scanf("%d", &day);
