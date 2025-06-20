@@ -1,6 +1,5 @@
 decimal to hexadecimal converter
   #include <stdio.h>
-
 void decimalToHexadecimal(int decimal) {
     char hexadecimal[100];
     int i = 0;
@@ -19,7 +18,6 @@ void decimalToHexadecimal(int decimal) {
     }
     printf("\n");
 }
-
 int main() {
     int decimal;
     scanf("%d", &decimal);
