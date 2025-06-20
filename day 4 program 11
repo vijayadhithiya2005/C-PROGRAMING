@@ -1,0 +1,32 @@
+reverse prefix of word
+  #include <stdio.h>
+#include <string.h>
+void reversePrefix(char word[], char ch) {
+    int i;
+    for (i = 0; word[i] != '\0'; ++i) {
+        if (word[i] == ch) break;
+    }
+    if (word[i] == '\0') return;
+    int left = 0, right = i;
+    while (left < right) {
+        char tmp = word[left];
+        word[left] = word[right];
+        word[right] = tmp;
+        left++;
+        right--;
+    }
+}
+int main() {
+    char word1[] = "abcdefd";
+    reversePrefix(word1, 'd');
+    char word2[] = "xyxzxe";
+    reversePrefix(word2, 'z'); 
+    char word3[] = "abcd";
+    reversePrefix(word3, 'z');
+    char word4[] = "adbedfsm";
+    reversePrefix(word4, 'e');
+    printf("%s\n", word4);
+    char word5[] = "prefixword";
+    reversePrefix(word5, 'x');
+    return 0;
+}
