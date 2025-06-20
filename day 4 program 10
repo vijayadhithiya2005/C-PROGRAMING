@@ -1,0 +1,41 @@
+alternating code
+  #include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[1001];
+    if (!fgets(s, sizeof(s), stdin)) return 0;    
+    int n = strlen(s);
+    if (s[n-1] == '\n') s[--n] = '\0';
+
+    if (n < 2) {
+        printf("No\n");
+        return 0;
+    }
+
+    char x = s[0], y = 0;
+    for (int i = 1; i < n; i++) {
+        if (s[i] != x) {
+            y = s[i];
+            break;
+        }
+    }
+    if (!y) {
+        printf("No\n");
+        return 0;
+    }
+    for (int i = 0; i < n; i++) {
+        if (s[i] != x && s[i] != y) {
+            printf("No\n");
+            return 0;
+        }
+    }
+    for (int i = 1; i < n; i++) {
+        if (s[i] == s[i-1]) {
+            printf("No\n");
+            return 0;
+        }
+    }
+    printf("Yes\n");
+    return 0;
+}
