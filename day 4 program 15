@@ -1,0 +1,32 @@
+recursion count the digits
+  #include <stdio.h>
+
+
+int countDigits(long long n) {
+    if (n == 0)
+        return 0;
+    else
+        return 1 + countDigits(n / 10);
+}
+
+int main() {
+    long long num;
+
+    
+    scanf("%lld", &num);
+
+    
+    if (num == 0) {
+        printf("The Count the digits: 1\n");
+    } else {
+        
+        if (num < 0) {
+            num = -num;
+        }
+
+        int result = countDigits(num);
+        printf("The Count the digits: %d\n", result);
+    }
+
+    return 0;
+}
