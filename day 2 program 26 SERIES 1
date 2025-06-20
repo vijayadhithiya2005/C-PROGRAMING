@@ -1,4 +1,4 @@
-series 1
+SERIES 1
  #include <stdio.h>
 int main() {
     int n, i;
