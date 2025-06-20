@@ -1,0 +1,25 @@
+rotate string
+  #include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+int main() {
+    char s[101], goal[101];
+    if (!fgets(s, sizeof(s), stdin)) return 0;
+    if (!fgets(goal, sizeof(goal), stdin)) return 0;
+    s[strcspn(s, "\n")] = '\0';
+    goal[strcspn(goal, "\n")] = '\0';
+
+    bool ok = false;
+    if (strlen(s) == strlen(goal)) {
+        char tmp[202];
+        strcpy(tmp, s);
+        strcat(tmp, s);
+        if (strstr(tmp, goal) != NULL) {
+            ok = true;
+        }
+    }
+
+    printf(ok ? "true\n" : "false\n");
+    return 0;
+}
