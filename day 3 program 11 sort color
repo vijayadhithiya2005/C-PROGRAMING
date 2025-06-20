@@ -21,22 +21,17 @@ void sortColors(int* nums, int numsSize) {
         }
     }
 }
-
 int main() {
     int n;
     scanf("%d", &n);
     int nums[n];
-    
     for (int i = 0; i < n; i++) {
         scanf("%d", &nums[i]);
     }
-
     sortColors(nums, n);
-
     for (int i = 0; i < n; i++) {
         printf("%d ", nums[i]);
     }
     printf("\n");
-
     return 0;
 }
